@@ -1,0 +1,11 @@
+.app_newsletter .es-newsletter_header {
+    color: #ff598a;
+}
+.app_newsletter .es-newsletter_email {
+    color: #fff;
+    background: #070222;
+    text-align: center;
+}
+.app_newsletter .es-newsletter_email:focus {
+    outline: 2px solid #5e9fff;
+}

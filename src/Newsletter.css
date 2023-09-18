@@ -1,0 +1,116 @@
+:root {
+    --colourSpectrum1: #ff598a;
+    --colourSpectrum2: #de56e8;
+    --colourSpectrum3: #b36bff;
+    --colourSpectrum4: #5b56e8;
+    --colourSpectrum5: #5e9fff;
+}
+
+@keyframes es-newsletter_bar--jitter {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0.9);
+    }
+}
+
+.es-newsletter {
+    position: relative;
+    max-width: 100%;
+    font-size: 1.25em;
+    padding: 1em 1em 2em 1em;
+    background: #2b283d;
+}
+
+.es-newsletter_header {
+    position: relative;
+    color: white;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    text-shadow: 0 3px 2px #000;
+}
+
+.es-newsletter_header h2 {
+    margin: 0 0 0.5em 0;
+}
+
+.es-newsletter_email {
+    position: relative;
+    height: 2em;
+    line-height: 2em;
+    font-size: 0.85em;
+    padding: 0 0.5em;
+    width: 100%;
+    margin: 0.15em;
+    border: 1px solid black;
+}
+
+.es-newsletter_email:focus {
+    outline: 2px solid #fff;
+    outline-offset: 0.15em;
+}
+.es-newsletter_submit {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%) rotate(0deg);
+    height: 0;
+    width: 0;
+    text-transform: uppercase;
+    transition: all 300ms;
+    font-size: 0.4em;
+}
+.es-newsletter_spectrum {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+}
+.es-newsletter_bar {
+    animation: es-newsletter_bar--jitter 350ms ease-out infinite alternate;
+    height: 0.5em;
+    width: 20%;
+    transform-origin: bottom;
+    transition: all 1s;
+}
+
+.es-newsletter_bar--active {
+    height: 100%;
+}
+
+.es-newsletter_bar:nth-child(1n) {
+    background: var(--colourSpectrum1);
+    animation-delay: 0;
+}
+
+.es-newsletter_bar:nth-child(2n) {
+    background: var(--colourSpectrum2);
+    animation-delay: 50ms;
+}
+
+.es-newsletter_bar:nth-child(3n) {
+    background: var(--colourSpectrum3);
+    animation-delay: 100ms;
+}
+
+.es-newsletter_bar:nth-child(4n) {
+    background: var(--colourSpectrum4);
+    animation-delay: 150ms;
+}
+
+.es-newsletter_bar:nth-child(5n) {
+    background: var(--colourSpectrum5);
+    animation-delay: 200ms;
+}
+
+@media (min-width: 800px) {
+    .es-newsletter {
+        font-size: 2.25em;
+        max-width: 700px;
+    }
+}
